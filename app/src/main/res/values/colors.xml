@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background">#121212</color>
+    <color name="surface">#1E1E1E</color>
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#B0B0B0</color>
+    <color name="text_secondary_light">#CCCCCC</color>
+    <color name="call_green">#4CAF50</color>
+    <color name="call_red">#F44336</color>
+    <color name="ai_purple">#9C27B0</color>
+    <color name="incoming_call_bg">#1A1A2E</color>
+    <color name="white">#FFFFFF</color>
+    <color name="dialpad_button">#2A2A2A</color>
+</resources>

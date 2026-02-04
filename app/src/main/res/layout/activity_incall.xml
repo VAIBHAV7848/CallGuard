@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="24dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivCallerPhoto"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_person"
+            android:layout_marginTop="32dp" />
+
+        <TextView
+            android:id="@+id/tvCallerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textColor="@color/text_primary"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/tvPhoneNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/text_secondary" />
+
+        <TextView
+            android:id="@+id/tvCallState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/text_secondary"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/tvDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/text_primary"
+            android:layout_marginTop="8dp"
+            android:text="00:00" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="48dp">
+
+            <ImageButton android:id="@+id/btnMute" style="@style/CallControlButton" android:src="@drawable/ic_mute" />
+            <ImageButton android:id="@+id/btnKeypad" style="@style/CallControlButton" android:src="@drawable/ic_keypad" android:layout_marginStart="32dp" />
+            <ImageButton android:id="@+id/btnSpeaker" style="@style/CallControlButton" android:src="@drawable/ic_speaker" android:layout_marginStart="32dp" />
+        </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnEndCall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_call_end"
+            android:backgroundTint="@color/call_red"
+            android:layout_marginTop="48dp" />
+
+        <!-- DTMF Keypad -->
+        <GridLayout
+            android:id="@+id/layoutKeypad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:rowCount="4"
+            android:visibility="gone"
+            android:layout_marginTop="24dp">
+            <Button android:id="@+id/btn1" style="@style/DTMFButton" android:text="1" />
+            <Button android:id="@+id/btn2" style="@style/DTMFButton" android:text="2" />
+            <Button android:id="@+id/btn3" style="@style/DTMFButton" android:text="3" />
+            <Button android:id="@+id/btn4" style="@style/DTMFButton" android:text="4" />
+            <Button android:id="@+id/btn5" style="@style/DTMFButton" android:text="5" />
+            <Button android:id="@+id/btn6" style="@style/DTMFButton" android:text="6" />
+            <Button android:id="@+id/btn7" style="@style/DTMFButton" android:text="7" />
+            <Button android:id="@+id/btn8" style="@style/DTMFButton" android:text="8" />
+            <Button android:id="@+id/btn9" style="@style/DTMFButton" android:text="9" />
+            <Button android:id="@+id/btnStar" style="@style/DTMFButton" android:text="*" />
+            <Button android:id="@+id/btn0" style="@style/DTMFButton" android:text="0" />
+            <Button android:id="@+id/btnHash" style="@style/DTMFButton" android:text="#" />
+        </GridLayout>
+    </LinearLayout>
+
+    <!-- AI Overlay -->
+    <LinearLayout
+        android:id="@+id/layoutAIOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@drawable/bg_ai_overlay"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🤖 AI Active"
+                android:textSize="16sp"
+                android:textColor="@color/ai_purple" />
+
+            <TextView
+                android:id="@+id/tvIntent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/text_secondary"
+                android:layout_marginStart="16dp" />
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/scrollTranscript"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:id="@+id/tvTranscript"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/text_primary" />
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/btnTakeOver"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🎤 Take Over"
+                android:backgroundTint="@color/call_green" />
+
+            <Button
+                android:id="@+id/btnMuteAI"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🔇 Mute AI"
+                android:layout_marginStart="16dp" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

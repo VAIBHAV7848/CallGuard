@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.CallGuard" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/ai_purple</item>
+        <item name="colorSecondary">@color/call_green</item>
+        <item name="android:windowBackground">@color/background</item>
+        <item name="android:statusBarColor">@color/background</item>
+        <item name="android:navigationBarColor">@color/background</item>
+    </style>
+
+    <style name="Theme.CallGuard.FullScreen" parent="Theme.CallGuard">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowShowWallpaper">true</item>
+    </style>
+
+    <style name="DialpadButton">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:background">@drawable/bg_dialpad_button</item>
+    </style>
+
+    <style name="DTMFButton">
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:background">@drawable/bg_dialpad_button</item>
+    </style>
+
+    <style name="CallControlButton">
+        <item name="android:layout_width">56dp</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:background">@drawable/bg_call_control</item>
+        <item name="android:tint">@color/text_primary</item>
+    </style>
+</resources>

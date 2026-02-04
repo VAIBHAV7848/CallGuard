@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/background">
+
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_back"
+        android:background="@null" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🤖 AI Call Summary"
+        android:textSize="24sp"
+        android:textColor="@color/text_primary"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/tvCallerNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@color/text_secondary"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/tvIntent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@color/ai_purple"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Summary"
+        android:textSize="16sp"
+        android:textColor="@color/text_primary"
+        android:layout_marginTop="24dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvSummary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/text_secondary"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Key Points"
+        android:textSize="16sp"
+        android:textColor="@color/text_primary"
+        android:layout_marginTop="24dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvKeyPoints"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/text_secondary"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Transcript"
+        android:textSize="16sp"
+        android:textColor="@color/text_primary"
+        android:layout_marginTop="24dp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:id="@+id/tvTranscript"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/text_secondary" />
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnCallBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="📞 Call Back"
+        android:backgroundTint="@color/call_green"
+        android:layout_marginTop="16dp" />
+</LinearLayout>

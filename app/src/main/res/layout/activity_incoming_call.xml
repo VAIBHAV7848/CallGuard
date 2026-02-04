@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="32dp"
+    android:background="@color/incoming_call_bg">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivCallerPhoto"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/ic_person" />
+
+    <TextView
+        android:id="@+id/tvCallerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="28sp"
+        android:textColor="@color/white"
+        android:layout_marginTop="24dp" />
+
+    <TextView
+        android:id="@+id/tvPhoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@color/text_secondary_light"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/tvAIIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🤖 Unknown Caller - AI Ready"
+        android:textSize="14sp"
+        android:textColor="@color/ai_purple"
+        android:layout_marginTop="16dp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="48dp">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnReject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_call_end"
+            android:backgroundTint="@color/call_red" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnAnswer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_call"
+            android:backgroundTint="@color/call_green"
+            android:layout_marginStart="64dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnLetAIHandle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🤖 Let AI Handle"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/ai_purple"
+        android:layout_marginTop="32dp"
+        android:visibility="gone" />
+</LinearLayout>

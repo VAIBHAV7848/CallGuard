@@ -1,6 +1,8 @@
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect
 from contextlib import asynccontextmanager
 import json
+from dotenv import load_dotenv
+load_dotenv()
 from ai.dialogue_controller import DialogueController
 
 @asynccontextmanager

@@ -2,7 +2,7 @@ package com.callguard.core
 
 object Constants {
     // Backend WebSocket URL - Update with your deployed backend
-    const val BACKEND_WS_URL = "wss://callguard-backend.fly.dev/ws/call"
+    const val BACKEND_WS_URL = "wss://callguard-backend.onrender.com/ws/call"
     
     // Notification Channels
     const val CHANNEL_INCOMING_CALL = "incoming_call"
